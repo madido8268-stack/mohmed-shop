@@ -1,131 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOHMAD SHOP - Official Store</title>
+    <title>متجر محمد لأزياء الأطفال</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fcf8f2;
-            color: #333;
+            font-family: Arial, sans-serif;
+            background-color: #fcfbfa;
             margin: 0;
             padding: 0;
-            text-align: center;
+            color: #333;
         }
         header {
-            background-color: #1a365d;
+            background-color: #1e3a8a;
             color: white;
-            padding: 40px 20px;
-        }
-        h1 {
-            margin: 0;
-            font-size: 45px;
-            letter-spacing: 2px;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
+            text-align: center;
+            padding: 20px;
         }
         .container {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        .products-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 30px;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
         }
         .product-card {
             background: white;
-            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 280px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            overflow: hidden;
             text-align: center;
+            padding-bottom: 20px;
         }
-        .product-card h3 {
-            color: #1a365d;
-            margin-bottom: 10px;
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .product-card h2 {
+            color: #1e3a8a;
+            margin: 15px 0 5px;
         }
         .price {
-            font-weight: bold;
-            color: #2b2b2b;
             font-size: 20px;
-            margin: 15px 0;
+            font-weight: bold;
+            color: #16a34a;
+            margin: 10px 0;
         }
-        .btn {
+        .btn-whatsapp {
+            display: inline-block;
             background-color: #25d366;
             color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 16px;
+            padding: 10px 25px;
             border-radius: 5px;
-            display: inline-block;
-            transition: 0.3s;
+            text-decoration: none;
             font-weight: bold;
-        }
-        .btn:hover {
-            background-color: #128c7e;
-        }
-        footer {
-            background-color: #1a365d;
-            color: white;
-            padding: 30px;
-            margin-top: 50px;
-        }
-        .contact-info {
-            font-size: 16px;
-            color: #ddd;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>MOHMAD SHOP</h1>
-        <p>Special Uniforms for Kids (Age 1 to 13 Years)</p>
+        <h1>متجر محمد لأزياء الأطفال العسكرية والرسمية</h1>
+        <p>جودة عالية وأزياء رائعة للأطفال (من سنة إلى 13 سنة)</p>
     </header>
 
     <div class="container">
-        <h2>Featured Products</h2>
-        
-        <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <h3>Police Blue Uniform</h3>
-                <p>High quality kids police uniform. Suitable for ages 1 to 13 years.</p>
-                <div class="price">200 MAD</div>
-                <a href="https://wa.me/212603741474" target="_blank" class="btn">Order via WhatsApp</a>
-            </div>
+        <!-- المنتج الأول -->
+        <div class="product-card">
+            <img src="police.jpg.jpeg" alt="زي الشرطة">
+            <h2>زي الشرطة للأطفال</h2>
+            <p>زي رسمي عالي الجودة ومريح للأطفال.</p>
+            <div class="price">200 درهم</div>
+            <a href="https://api.whatsapp.com/send?phone=212603741474&text=السلام عليكم، بغيت نطلب زي الشرطة للأطفال (200 درهم)" class="btn-whatsapp" target="_blank">اطلب عبر واتساب</a>
+        </div>
 
-            <!-- Product 2 -->
-            <div class="product-card">
-                <h3>Royal Gendarmerie Uniform</h3>
-                <p>Premium royal gendarmerie uniform for kids (1 - 13 years).</p>
-                <div class="price">200 MAD</div>
-                <a href="https://wa.me/212603741474" target="_blank" class="btn">Order via WhatsApp</a>
-            </div>
+        <!-- المنتج الثاني -->
+        <div class="product-card">
+            <img src="gendarmerie.jpg.jpeg" alt="زي الدرك الملكي">
+            <h2>زي الدرك الملكي</h2>
+            <p>تصميم مميز وأنيق يحاكي زي الدرك الملكي.</p>
+            <div class="price">200 درهم</div>
+            <a href="https://api.whatsapp.com/send?phone=212603741474&text=السلام عليكم، بغيت نطلب زي الدرك الملكي (200 درهم)" class="btn-whatsapp" target="_blank">اطلب عبر واتساب</a>
+        </div>
 
-            <!-- Product 3 -->
-            <div class="product-card">
-                <h3>Military Uniform</h3>
-                <p>Durable and stylish military uniform for kids (1 - 13 years).</p>
-                <div class="price">200 MAD</div>
-                <a href="https://wa.me/212603741474" target="_blank" class="btn">Order via WhatsApp</a>
-            </div>
+        <!-- المنتج الثالث -->
+        <div class="product-card">
+            <img src="military.jpg.jpeg" alt="الزي العسكري">
+            <h2>الزي العسكري المموه</h2>
+            <p>زي عسكري متين وعصري ومحبوب لدى الأطفال.</p>
+            <div class="price">200 درهم</div>
+            <a href="https://api.whatsapp.com/send?phone=212603741474&text=السلام عليكم، بغيت نطلب الزي العسكري (200 درهم)" class="btn-whatsapp" target="_blank">اطلب عبر واتساب</a>
         </div>
     </div>
-
-    <footer>
-        <h2>Contact Us & Orders</h2>
-        <p class="contact-info">Call us or send a message on WhatsApp for fast delivery.</p>
-        <p class="contact-info">📞 Phone / WhatsApp: +212 603-741474</p>
-        <p style="font-size: 14px; color: #aaa; margin-top: 20px;">&copy; 2026 MOHMAD SHOP. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
