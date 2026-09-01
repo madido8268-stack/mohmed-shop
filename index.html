@@ -47,14 +47,33 @@
             color: #16a34a;
             margin: 10px 0;
         }
+        .order-form {
+            background: #f9fafb;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            text-align: right;
+        }
+        .order-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
         .btn-whatsapp {
-            display: inline-block;
+            display: block;
+            width: 100%;
             background-color: #25d366;
             color: white;
-            padding: 10px 25px;
+            padding: 12px;
+            border: none;
             border-radius: 5px;
-            text-decoration: none;
+            font-size: 16px;
             font-weight: bold;
+            cursor: pointer;
             margin-top: 10px;
         }
     </style>
@@ -73,7 +92,14 @@
             <h2>زي الشرطة للأطفال</h2>
             <p>زي رسمي عالي الجودة ومريح للأطفال.</p>
             <div class="price">200 درهم</div>
-            <a href="https://api.whatsapp.com/send?phone=212603741474&text=السلام عليكم، بغيت نطلب زي الشرطة للأطفال (200 درهم)" class="btn-whatsapp" target="_blank">اطلب عبر واتساب</a>
+            
+            <div class="order-form">
+                <h3>أدخل معلوماتك للطلب:</h3>
+                <input type="text" id="name1" placeholder="الاسم الكامل">
+                <input type="tel" id="phone1" placeholder="رقم الهاتف">
+                <input type="text" id="address1" placeholder="العنوان (المدينة / الحي)">
+                <button class="btn-whatsapp" onclick="sendOrder('زي الشرطة للأطفال', '200 درهم', 'name1', 'phone1', 'address1')">تأكيد الطلب عبر الواتساب</button>
+            </div>
         </div>
 
         <!-- المنتج الثاني -->
@@ -82,7 +108,14 @@
             <h2>زي الدرك الملكي</h2>
             <p>تصميم مميز وأنيق يحاكي زي الدرك الملكي.</p>
             <div class="price">200 درهم</div>
-            <a href="https://api.whatsapp.com/send?phone=212603741474&text=السلام عليكم، بغيت نطلب زي الدرك الملكي (200 درهم)" class="btn-whatsapp" target="_blank">اطلب عبر واتساب</a>
+            
+            <div class="order-form">
+                <h3>أدخل معلوماتك للطلب:</h3>
+                <input type="text" id="name2" placeholder="الاسم الكامل">
+                <input type="tel" id="phone2" placeholder="رقم الهاتف">
+                <input type="text" id="address2" placeholder="العنوان (المدينة / الحي)">
+                <button class="btn-whatsapp" onclick="sendOrder('زي الدرك الملكي', '200 درهم', 'name2', 'phone2', 'address2')">تأكيد الطلب عبر الواتساب</button>
+            </div>
         </div>
 
         <!-- المنتج الثالث -->
@@ -91,9 +124,39 @@
             <h2>الزي العسكري المموه</h2>
             <p>زي عسكري متين وعصري ومحبوب لدى الأطفال.</p>
             <div class="price">200 درهم</div>
-            <a href="https://api.whatsapp.com/send?phone=212603741474&text=السلام عليكم، بغيت نطلب الزي العسكري (200 درهم)" class="btn-whatsapp" target="_blank">اطلب عبر واتساب</a>
+            
+            <div class="order-form">
+                <h3>أدخل معلوماتك للطلب:</h3>
+                <input type="text" id="name3" placeholder="الاسم الكامل">
+                <input type="tel" id="phone3" placeholder="رقم الهاتف">
+                <input type="text" id="address3" placeholder="العنوان (المدينة / الحي)">
+                <button class="btn-whatsapp" onclick="sendOrder('زي العسكري المموه', '200 درهم', 'name3', 'phone3', 'address3')">تأكيد الطلب عبر الواتساب</button>
+            </div>
         </div>
     </div>
+
+    <script>
+        function sendOrder(productName, price, nameId, phoneId, addressId) {
+            var name = document.getElementById(nameId).value;
+            var phone = document.getElementById(phoneId).value;
+            var address = document.getElementById(addressId).value;
+
+            if(name === "" || phone === "" || address === "") {
+                alert("المرجو تعبئة جميع المعلومات (الاسم، الهاتف، العنوان)!");
+                return;
+            }
+
+            var message = "سلام عليكم، بغيت نطلب هاد المنتج:\n\n" +
+                          "📦 المنتج: " + productName + "\n" +
+                          "💰 الثمن: " + price + "\n\n" +
+                          "👤 الاسم: " + name + "\n" +
+                          "📞 الهاتف: " + phone + "\n" +
+                          "📍 العنوان: " + address;
+
+            var whatsappUrl = "https://api.whatsapp.com/send?phone=212603741474&text=" + encodeURIComponent(message);
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 
 </body>
 </html>
